@@ -1,0 +1,229 @@
+Script started on Mon 06 Feb 2017 01:37:18 PM EST
+ajs94@aiken:~/proj01$ cat re  RectangleArea.java
+
+
+/* RectangleArea.java computes the area of a rectangle.
+ *
+ * Input: The width and height of the rectangle.
+ * Precondition: The inputs are positive numbers.
+ * Output: The area of the rectangle.
+ *
+ * Completed by: Aaron Santucci ajs94
+ * Date: February 6, 2017
+ **********************************************************/
+
+
+import java.util.Scanner;  // include class for Scanner
+
+public class RectangleArea {
+
+     /* function circleArea() computes a circle's area, given its radius.
+      * Parameter: w, a double
+      * 	   h, a double
+      * Precondition: w and h is not negative.
+      * Returns: the area of the rectangle
+      */
+     public static double rectangleArea(double w, double h) {
+        return w * h;
+     }
+	
+  // main program
+  public static void main(String[] args) {
+      // prompt for inputs width and height
+      System.out.println("To compute the area of a rectangle,");
+
+	// get the width
+      System.out.print(" enter its height: ");
+      // Create a connection named keyboard to standard in
+      Scanner keyboard = new Scanner(System.in); 
+      //Get the number from the user
+      double width = keyboard.nextDouble();
+
+	// get the height
+      System.out.print(" enter its width: ");
+      //Get the number from the user
+      double height = keyboard.nextDouble();
+
+      // output area
+      System.out.println("The area is " + rectangleArea(width, height)); 
+  } // main method
+} // class RectangleArea
+ajs94@aiken:~/proj01$ javac -  dec precation RectangleArea.java
+ajs94@aiken:~/proj01$ java RectanlgeArea
+Error: Could not find or load main class RectanlgeArea
+ajs94@aiken:~/proj01$ java RectanlgeArea[19@c -deprecation RectangleArea.javaajs94@aiken:~/proj01$ [15Pcat RectangleArea.java[4Pa2ps script.e-lispcat RectangleArea.java[4Pa2ps script.e-lisp[11Pemacs &a2ps lab01-results[11Pemacs &a2ps script.e-lispcat RectangleArea.java[15@javac -deprecation RectangleArea.javaajs94@aiken:~/proj01$ [15Pcat RectangleArea.java[4Pa2ps script.e-lisp[11Pemacs &a2ps lab01-resultscat script.java script.ada script.e-lisp script.ruby > lab001-results[An:~/proj01$ a2ps lab01-results[K
+[K[Aajs94@aiken:~/proj01$ a2ps lab01-results[11Pemacs &a2ps script.e-lispcat RectangleArea.java[15@javac -deprecation RectangleArea.javaajs94@aiken:~/proj01$ java[19P RectanlgeArea[Kjava RectangleArea
+To compute the area of a rectangle,
+ enter its height: 2.5
+ enter its width: 4
+The area is 10.0
+ajs94@aiken:~/proj01$ java RectangleArea
+To compute the area of a rectangle,
+ enter its height: 12
+ enter its width: 3.5
+The area is 42.0
+ajs94@aiken:~/proj01$ java RectangleArea
+To compute the area of a rectangle,
+ enter its height: 5
+ enter its width: 5
+The area is 25.0
+ajs94@aiken:~/proj01$ exit
+
+Script done on Mon 06 Feb 2017 01:39:23 PM EST
+Script started on Mon 06 Feb 2017 01:57:40 PM EST
+ajs94@aiken:~/proj01$ cat rectangle_areajava RectangleAreacat rectangle_area[Kcat rectangle_area.ada b
+-- rectangle_area.adb computes the area of a rectangle.
+--
+-- Input: The width of the rectangle,
+-- Input: The height of the rectangle,		
+-- Precondition: The width and height are positive numbers.
+-- Output: The area of the rectangle.
+-- Completed by: Aaron Santucci ajs94
+-- Date: February 6, 2017
+
+with Ada.Text_IO, Ada.Float_Text_IO;
+use Ada.Text_IO, Ada.Float_Text_IO;
+
+procedure rectangle_area is
+
+   width, height, area : float; 
+
+   -- function rectangleArea computes a rectangle's area, given its width and height
+   -- Parameter: w, h, a float
+   -- Precondition: w,h >= 0.0
+   -- Return: the area of the rectangle whose width is w and heigh is h
+   ----------------------------------------------------
+   function rectangleArea(w: in float; h: in float) return float is 
+   begin
+      return w * h;
+   end rectangleArea;
+
+begin                           
+   Put_Line("To compute the area of a rectangle,");
+
+   Put("enter its height: ");
+   Get(height);
+   Put("enter its width: ");
+   Get(width);
+
+   area := rectangleArea(width, height);
+
+   Put("The rectangle's area is ");
+   Put(area);
+   New_Line;
+end rectangle_area;
+ajs94@aiken:~/proj01$ gna   cat rectangle_area.adb[Kjava RectangleArealgeArea[19@c -deprecation RectangleArea.javaajs94@aiken:~/proj01$ [15Pcat RectangleArea.java[4Pa2ps script.e-lispcat RectangleArea.java[4Pa2ps script.e-lisp[11Pemacs &a2ps script.e-lispcat RectangleArea.java[15@javac -deprecation RectangleArea.javaajs94@aiken:~/proj01$ java[19P RectanlgeAreagleAreacat rectangle_area.adb[Kga natmake rectangle_area
+gnatmake: "rectangle_area" up to date.
+ajs94@aiken:~/proj01$ ./rectangle_area
+To compute the area of a rectangle,
+enter its height: 3
+enter its width: 4
+The rectangle's area is  1.20000E+01
+ajs94@aiken:~/proj01$ ./rectangle_area
+To compute the area of a rectangle,
+enter its height: 3.5
+enter its width: 7
+The rectangle's area is  2.45000E+01
+ajs94@aiken:~/proj01$ ./rectangle_area
+To compute the area of a rectangle,
+enter its height: 15
+enter its width: ^[[A^[[B        7
+The rectangle's area is  1.05000E+02
+ajs94@aiken:~/proj01$ exit
+
+Script done on Mon 06 Feb 2017 01:59:26 PM EST
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+;;; rectangle_area.el computes the area of a rectangle. 
+;;;                                                                     
+;;; Input: The width and height of the rectangle.                               
+;;; Precondition: The width and height are positive numbers.                    
+;;; Output: The area of the rectangle.                                     
+;;; 
+;;; Completed by: Aaron Santucci ajs94
+;;; Date: February 6, 2017
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                   
+
+;;; function rectangleArea computes a rectangle's area, given its width and height.     
+;;; Parameters: w, a number; h, a number                                             
+;;; Precondition: w >= 0; h >= 0                                               
+;;; Returns: the area of the rectangle w * h.                   
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                  
+(defun rectangleArea (width height)
+  "Compute the area of a rectangle, passed its width and height."           
+  (* width height))  
+rectangleArea
+      
+
+(defun rectangle_area(w h)
+ "Compute the area of a rectangle, given its width and height interactively."
+  (defvar w)
+  (defvar h)
+  (princ "Enter a rectangle's width: ")        
+  (setq w (read))      
+  (princ "Enter a rectangle's height: ")        
+  (setq h (read))
+  (setq area (rectangleArea w h))
+  (message "The rectangle's area is %f." area))
+rectangle_area
+
+(rectangleArea 2 3)
+6
+(rectangleArea 14 16)
+224
+(rectangle_area 2 3)
+Enter a rectangle's width: Enter a rectangle's height: "The rectangle's area is 6.000000."
+(rectangle_area 14 16)
+Enter a rectangle's width: Enter a rectangle's height: "The rectangle's area is 224.000000."
+
+
+Script started on Mon 06 Feb 2017 03:04:27 PM EST
+ajs94@aiken:~/proj01$ cat s rectangle_area.rb
+#! /usr/bin/ruby
+# rectangle_area.rb computes the area of a rectangle given its width and height
+# 
+# Input: the width of the rectangle, 
+#        the height of the rectangle.
+# Precondition: the width and height are not negative
+# Output: the area of the rectangle.
+#
+# Completed by: Aaron Santucci ajs94
+# Date: February
+###############################################################
+
+# function rectangleArea returns a rectangle's area, given its width and height
+# Parameters: r, a number
+# Precondition: w, h > 0.
+# Returns: the area of a rectangle whose width is w and heigh h.
+def rectangleArea(w, h)
+    w * h 
+end
+
+if __FILE__ == $0
+   puts "To compute the area of a rectangle,"
+   print " enter its width: "
+   width = gets.chomp.to_f
+   print " enter its height: "
+   height = gets.chomp.to_f
+   print "The rectangle's area is: "
+   puts rectangleArea(width, height)
+endajs94@aiken:~/proj01$ ruby rectangle_area.rb
+To compute the area of a rectangle,
+ enter its width: 2
+ enter its height: 3
+The rectangle's area is: 6.0
+ajs94@aiken:~/proj01$ ruby rectangle_area.rb
+To compute the area of a rectangle,
+ enter its width: 5
+ enter its height: 12.4 5
+The rectangle's area is: 62.5
+ajs94@aiken:~/proj01$ 3 ruby rectangle_area.rb
+To compute the area of a rectangle,
+ enter its width: 3
+ enter its height: 3
+The rectangle's area is: 9.0
+ajs94@aiken:~/proj01$ exit
+
+Script done on Mon 06 Feb 2017 03:05:27 PM EST

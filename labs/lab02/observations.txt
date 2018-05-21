@@ -1,0 +1,64 @@
+
+
+lex.yy.c
+
+1. 
+	Lines 739-770 are where it checks the input for whether or not it should output 
+	start, stop, and echoing commands. 
+
+	"
+	do_action:	/* This label is used only to access EOF actions. */
+
+			switch ( yy_act )
+		{ /* beginning of action switch */
+				case 0: /* must back up */
+				/* undo the effects of YY_DO_BEFORE_ACTION */
+				*yy_cp = (yy_hold_char);
+				yy_cp = (yy_last_accepting_cpos);
+				yy_current_state = (yy_last_accepting_state);
+				goto yy_find_action;
+	case 1:
+	YY_RULE_SETUP
+	#line 6 "example1.lex"
+	printf("Start command received\n");
+		YY_BREAK
+	case 2:
+	YY_RULE_SETUP
+	#line 7 "example1.lex"
+	printf("Stop command received\n");
+		YY_BREAK
+	case 3:
+	YY_RULE_SETUP
+	#line 8 "example1.lex"
+	ECHO;
+		YY_BREAK
+	#line 766 "lex.yy.c"
+	case YY_STATE_EOF(INITIAL):
+		yyterminate();
+	"
+2.
+	Underscores are not reognized under the given language because it only acccount
+		for numbers and digits.
+	Code with underscore:
+
+	%{
+	#include <stdio.h>
+	%}
+
+	%%
+	[0123456789]+           printf("NUMBER\n");
+	[_a-zA-Z][_a-zA-Z0-9]*    printf("WORD\n");
+	%%
+
+3.	Output is from StudentInfo.h is each character's type outputted to console from
+		the file StudentInfo.h.
+
+4.	
+Terminal defs:
+	Symbols whose meaning is predefined are termianls.
+	Symbols whose meaning must be defined are non-terminals.
+After running:
+	It says "\tHeat turned on or off\n" rather than saying that it's either on or off.
+	There's no way to see what the temperature is after setting it.
+
+5.	Verified

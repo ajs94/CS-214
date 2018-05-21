@@ -1,0 +1,47 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+;;; rectangle_area.el computes the area of a rectangle. 
+;;;                                                                     
+;;; Input: The width and height of the rectangle.                               
+;;; Precondition: The width and height are positive numbers.                    
+;;; Output: The area of the rectangle.                                     
+;;; 
+;;; Completed by: Aaron Santucci ajs94
+;;; Date: February 6, 2017
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                   
+
+;;; function rectangleArea computes a rectangle's area, given its width and height.     
+;;; Parameters: w, a number; h, a number                                             
+;;; Precondition: w >= 0; h >= 0                                               
+;;; Returns: the area of the rectangle w * h.                   
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;                  
+(defun rectangleArea (width height)
+  "Compute the area of a rectangle, passed its width and height."           
+  (* width height))  
+rectangleArea
+      
+
+(defun rectangle_area(w h)
+ "Compute the area of a rectangle, given its width and height interactively."
+  (defvar w)
+  (defvar h)
+  (princ "Enter a rectangle's width: ")        
+  (setq w (read))      
+  (princ "Enter a rectangle's height: ")        
+  (setq h (read))
+  (setq area (rectangleArea w h))
+  (message "The rectangle's area is %f." area))
+rectangle_area
+
+(rectangleArea 2 3)
+6
+(rectangleArea 14 16)
+224
+(rectangle_area 2 3)
+Enter a rectangle's width: Enter a rectangle's height: "The rectangle's area is 6.000000."
+(rectangle_area 14 16)
+Enter a rectangle's width: Enter a rectangle's height: "The rectangle's area is 224.000000."
+
+

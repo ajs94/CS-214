@@ -1,0 +1,236 @@
+Script started on Mon 20 Feb 2017 02:52:36 PM EST
+ajs94@aiken:~/CS214/projects/proj03$ catS  Selection.java
+/* Selection.java returns the corresponding letter grade of a given average
+ * 
+ * Completed by: Aaron Santucci ajs94
+ * Date: February 17, 2017
+ ************************************************************/
+
+import java.util.Scanner;
+
+public class Selection {
+
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("\nEnter the average grade: "); // prompt
+
+		int average = Integer.parseInt(keyboard.next());       // read in the average 
+		System.out.println(letterGrade(average)); // display its letter grade
+	}
+	
+	/***************************************************************
+	* letterGrade converts an integer average to its corresponding char letter grade.
+	* 
+	* Param: average, an int
+	* PRE: average is greater than or equal to 0 and less than 101
+	* Return: the char of the corresponding average 
+	*/
+	public static char letterGrade(int average) {
+		switch (average / 10)
+		{
+			case 10: case 9: 
+				return 'A';
+			case 8:
+				return 'B';
+			case 7:
+				return 'C';
+			case 6:
+				return 'D';
+			default:
+				return 'F';
+		}
+	}
+}
+ajs94@aiken:~/CS214/projects/proj03$ javac - dec precation Selection.java
+javac: invalid flag: -
+Usage: javac <options> <source files>
+use -help for a list of possible options
+ajs94@aiken:~/CS214/projects/proj03$ javac - deprecation Selection.java [1P
+ajs94@aiken:~/CS214/projects/proj03$ javac -deprecation Selection.java
+ajs94@aiken:~/CS214/projects/proj03$ java Seld ection
+
+Enter the average grade: 
+100
+A
+ajs94@aiken:~/CS214/projects/proj03$ java Selection
+
+Enter the average grade: 
+96
+A
+ajs94@aiken:~/CS214/projects/proj03$ java Selection
+
+Enter the average grade: 
+85
+B
+ajs94@aiken:~/CS214/projects/proj03$ java Selection
+
+Enter the average grade: 
+74
+C
+ajs94@aiken:~/CS214/projects/proj03$ java Selection
+
+Enter the average grade: 
+64 3
+D
+ajs94@aiken:~/CS214/projects/proj03$ java Selection
+
+Enter the average grade: 
+52
+F
+ajs94@aiken:~/CS214/projects/proj03$ exit
+
+Script done on Mon 20 Feb 2017 02:54:16 PM EST
+Script started on Mon 20 Feb 2017 02:56:56 PM EST
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada               gnatmake selection_ada.adb                          cat selection_adb a.adb
+-- selection_ada.abd returns the corresponding letter grade of a given average
+-- Completed by: Aaron Santucci ajs94
+-- Date: February 20, 2017
+
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use  Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure selection_ada is
+
+	average : String(1..9) := "         ";
+	charsRead : Natural;
+	
+	function letterGrade (average: String) return String is
+	avg : Integer := Integer'Value(average); 
+	begin
+		case avg/10 is
+			when 10 | 9 => return "A";
+			when 8 => return "B";
+			when 7 => return "C";
+			when 6 => return "D";
+			when others => return "F";	
+		end case;
+	end letterGrade;
+
+begin
+	Put("Enter your average grade: ");      -- Prompt for input
+	Get_Line(average, charsRead);           -- Input
+	Put( letterGrade(average) );            -- Convert and output
+	New_Line;
+end selection_ada;
+ajs94@aiken:~/CS214/projects/proj03$ cat selection_ada.adb[1P[1P[1P[1@g[1@n[1@a[1@t[1@m[1@a[1@k[1@e
+gnatmake: "selection_ada" up to date.
+ajs94@aiken:~/CS214/projects/proj03$ gnatmake selection_ada.adb[5Pcat selection_ada.adb[6P./selection_ada
+Enter your average grade: 100
+A
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada
+Enter your average grade: 96
+A
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada
+Enter your average grade: 85
+B
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada
+Enter your average grade: 84
+B
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada7 
+Enter your average grade: 74
+C
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada
+Enter your average grade: 63
+D
+ajs94@aiken:~/CS214/projects/proj03$ ./selection_ada
+Enter your average grade: 52
+F
+ajs94@aiken:~/CS214/projects/proj03$ exit
+
+Script done on Mon 20 Feb 2017 02:58:04 PM EST
+;;; selection_lisp.el returns the corresponding letter grade of a given average
+;;; Copleted by: Aaron Santucci ajs94
+;;; Date: February 20, 2017
+
+(defun letterGrade(score)
+  (cond
+   ((> score 89) "A")
+   ((> score 79) "B")
+   ((> score 69) "C")
+   ((> score 59) "D")
+   (t "F")
+   )
+  )
+letterGrade
+
+
+	  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; main function                        ;;;
+;;; input: average integer               ;;;
+;;; output: corresponding letter grade   ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun main (score)
+ (interactive "sEnter your average grade: ")  ; read year
+ (message "%d" (letterGrade score)))              ; display its code
+main
+
+
+;;; Tests...
+
+(letterGrade 93)
+"A"
+(letterGrade 84)
+"B"
+(letterGrade 75)
+"C"
+(letterGrade 66)
+"D"
+(letterGrade 57)
+"F"
+
+
+
+
+
+Script started on Mon 20 Feb 2017 02:58:49 PM EST
+ajs94@aiken:~/CS214/projects/proj03$ cat selection_ruby  by.rb
+#! /usr/bin/ruby
+# selection_ruby.rb returns the corresponding letter grade of a given average
+# Completed by: Aaron Santucci ajs94
+# Date: February 20, 2017
+
+# Input:  grade to be average into letter
+# Precondition: The grade less than 101 and greater or equal to 0
+# Output: The corresponding letter grade of the average
+
+def letterGrade(average)
+	average = average.to_i
+	case (average/10)
+		when 10, 9 then "A"
+		when 8 then "B"
+		when 7 then "C"
+		when 6 then "D"
+		else "D"
+	end
+end
+
+if __FILE__ == $0
+   print "Enter the average: "
+   average = gets
+   print "Letter grade is: "
+   puts letterGrade(average)
+endajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 100
+Letter grade is: A
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 96
+Letter grade is: A
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 85
+Letter grade is: B
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 74
+Letter grade is: C
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 73
+Letter grade is: C
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 63
+Letter grade is: D
+ajs94@aiken:~/CS214/projects/proj03$ ruby selection_ruby.rb
+Enter the average: 52
+Letter grade is: D
+ajs94@aiken:~/CS214/projects/proj03$ exit
+
+Script done on Mon 20 Feb 2017 03:02:29 PM EST

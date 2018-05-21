@@ -1,0 +1,38 @@
+-- rectangle_area.adb computes the area of a rectangle.
+--
+-- Input: The width of the rectangle,
+-- Input: The height of the rectangle,		
+-- Precondition: The width and height are positive numbers.
+-- Output: The area of the rectangle.
+-- Completed by: Aaron Santucci ajs94
+-- Date: February 6, 2017
+
+with Ada.Text_IO, Ada.Float_Text_IO;
+use Ada.Text_IO, Ada.Float_Text_IO;
+
+procedure rectangle_area is
+
+   width, height, area : float; 
+
+   -- function circleArea computes a circle's area, given its radius
+   -- Parameter: r, a float
+   -- Precondition: r >= 0.0
+   -- Return: the area of the circle whose radius is r
+   ----------------------------------------------------
+   function circleArea(r: in float) return float is 
+      PI : constant := 3.1415927;
+   begin
+      return PI * r ** 2;
+   end circleArea;
+
+begin                           
+   Put_Line("To compute the area of a circle,");
+   Put("enter its radius: ");
+   Get(radius);
+
+   area := circleArea(radius);
+
+   Put("The circle's area is ");
+   Put(area);
+   New_Line;
+end circle_area;

@@ -1,0 +1,182 @@
+Script started on Tue 28 Feb 2017 02:34:25 PM EST
+ajs94@hopper:~/CS214/projects/proj04$ cat Factorial.jaava   va
+/* Factorial.java displays the factorial of integer n.
+ *
+ * Input: integer n; the number taken the factorial of
+ * Output: The factorial of an input integer n
+ * Completed by: Aaron Santucci ajs94
+ ********************************************************/
+import java.util.Scanner; 	
+
+class Factorial {
+
+  public static void main(String[] args){
+    Scanner keyboard = new Scanner(System.in);
+    System.out.println("Enter the number to be taken the factorial of: ");
+    double n = keyboard.nextDouble();
+    double output = 1;
+
+    //start of for loop/ factorial-ing
+    for(int i=2; i <= n; i++)
+        output *= i;
+    System.out.println("The factorial of " + n + " is " + output);
+  }
+}ajs94@hopper:~/CS214/projects/proj04$ javac 0dep    -deprecation Factorial.java
+ajs94@hopper:~/CS214/projects/proj04$ java Factoir  rial
+Enter the number to be taken the factorial of: 
+2
+The factorial of 2.0 is 2.0
+ajs94@hopper:~/CS214/projects/proj04$ java Factorial
+Enter the number to be taken the factorial of: 
+5
+The factorial of 5.0 is 120.0
+ajs94@hopper:~/CS214/projects/proj04$ java Factorial
+Enter the number to be taken the factorial of: 
+7
+The factorial of 7.0 is 5040.0
+ajs94@hopper:~/CS214/projects/proj04$ exit
+
+Script done on Tue 28 Feb 2017 02:35:07 PM EST
+Script started on Tue 28 Feb 2017 02:33:17 PM EST
+ajs94@hopper:~/CS214/projects/proj04$ cat factorial_ada.adb
+-- factorial_ada.adb computes a factorial.
+--
+-- Input: Float n; the factorial being taken.
+-- Precondition: increment is positive.
+-- Output: the factorial of n
+--
+-- by: Aaron Santucci ajs94
+
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use  Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure factorial_ada is
+
+   n, i : Integer;
+   output : Integer := 1;
+
+begin
+   Put_Line("Enter the number to be taken factorial of: ");
+   Get(n);
+
+   -- Begin Loop
+   for i in 2..n
+   loop
+      output := output * i;
+   end loop;
+
+   Put("Factorial of "); 
+   Put(n); 
+   Put(" is "); 
+   Put(output);
+
+end factorial_ada;
+
+ajs94@hopper:~/CS214/projects/proj04$ ./factorial_ada               gnatmake factorial_ada
+gcc-5 -c factorial_ada.adb
+factorial_ada.adb:14:07: warning: variable "i" is never read and never assigned
+factorial_ada.adb:22:08: warning: for loop implicitly declares loop variable
+factorial_ada.adb:22:08: warning: declaration hides "i" declared at line 14
+gnatbind-5 -x factorial_ada.ali
+gnatlink-5 factorial_ada.ali
+ajs94@hopper:~/CS214/projects/proj04$ ./factorial_da  ada
+Enter the number to be taken factorial of: 
+2
+Factorial of           2 is           2
+ajs94@hopper:~/CS214/projects/proj04$ ./factorial_ada
+Enter the number to be taken factorial of: 
+5
+Factorial of           5 is         120
+ajs94@hopper:~/CS214/projects/proj04$ ./factorial_ada
+Enter the number to be taken factorial of: 
+7
+Factorial of           7 is        5040
+ajs94@hopper:~/CS214/projects/proj04$ exit
+
+Script done on Tue 28 Feb 2017 02:34:22 PM EST
+;;; factorialElisp.el displays the factorial of an input
+;;;
+;;; Input: n; the factorial being taken
+;;; PRE: n is a positive integer
+;;; Output: output; factorial of n
+;;;
+;;; by: Aaron Santucci ajs94
+
+;;; displayFactorial recursively generates the factorial of its parameter n
+;;; Param: n; an integer 
+;;; Output: the factorial of n
+(defun displayFactorial(n)
+  (if (< n 2)
+      1
+    (* n (displayFactorial (- n 1) )))
+  )
+displayFactorial
+
+
+;;; main function
+;;; input: n
+;;; output: factorial of n from function displayFactorial
+(defun main(n)
+  (displayFactorial n)
+  )
+main
+
+
+
+;;; Testing !!
+
+(displayFactorial 2)
+2
+
+(displayFactorial 5)
+120
+
+(displayFactorial 7)
+5040
+
+
+
+
+
+
+Script started on Tue 28 Feb 2017 02:35:14 PM EST
+ajs94@hopper:~/CS214/projects/proj04$ cat factorialRuby.rb
+#! /usr/bin/ruby
+# factorialRuby.rb computes a factorial
+#
+# by: Aaron Santucci ajs94
+#
+# Input:  n the value taken factorial of
+# Precondition: The n is positive
+# Output: The factorial output of n
+
+
+if __FILE__ == $0
+   print "Enter taken factorial of: "
+   n = gets.to_f
+   output = 1
+
+   # start of loop
+   for i in 2..n
+      output = output * i
+   end
+
+   puts "The factorial of #{ n } is #{ output } \n"
+end
+
+ajs94@hopper:~/CS214/projects/proj04$ ruby factorialRuby
+ruby: No such file or directory -- factorialRuby (LoadError)
+ajs94@hopper:~/CS214/projects/proj04$ ruby factorialRuby.rb
+Enter taken factorial of: 2
+The factorial of 2.0 is 2 
+ajs94@hopper:~/CS214/projects/proj04$ 5
+5: command not found
+ajs94@hopper:~/CS214/projects/proj04$ 5ruby factorialRuby.rb
+Enter taken factorial of: 5
+The factorial of 5.0 is 120 
+ajs94@hopper:~/CS214/projects/proj04$ ruby factorialRuby.rb
+Enter taken factorial of: 7
+The factorial of 7.0 is 5040 
+ajs94@hopper:~/CS214/projects/proj04$ exit
+
+Script done on Tue 28 Feb 2017 02:35:58 PM EST

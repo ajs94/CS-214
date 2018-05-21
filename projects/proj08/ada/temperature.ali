@@ -1,0 +1,87 @@
+V "GNAT Lib v5"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U temperature%b		temperature.adb		9bb9cc4e NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U temperature%s		temperature.ads		2c2c1f6c EE NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20141031112219 1d274481 system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D temperature.ads	20170411174420 2c2c1f6c temperature%s
+D temperature.adb	20170411174500 8ff826f6 temperature%b
+X 1 ada.ads
+16K9*Ada 19e8 23|7r6 7r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 23|7w10 7r27
+X 22 temperature.ads
+7K9*Temperature 29E9 35l5 35e16 23|9b14 187l5 187t16
+9R9*Temperature 11r34 13r36 14r35 16r36 17r37 18r36 20r38 21r38 23r40 24r42
+. 29c9 33e17 23|19r34 32r36 37r35 49r36 70r37 91r36 118r38 123r38 135r40
+. 164r42
+11U14*Init 11<20 11>48 11>70 23|19b14 23l8 23t12
+11r20 TheTemp{9R9} 23|19b20 21m7 22m7
+11f48 Degrees{float} 23|19b48 21r28
+11e70 Scale{character} 23|19b70 22r26
+13V13*GetDegree{float} 13>23 23|32b13 35l8 35t17
+13r23 TheTemp{9R9} 23|32b23 34r14
+14V13*GetScale{character} 14>22 23|37b13 40l8 40t16
+14r22 TheTemp{9R9} 23|37b22 39r14
+16V13*GetFahren{float} 16>23 23|49b13 68l8 68t17 143s38 172s38
+16r23 TheTemp{9R9} 23|49b23 52r10 53r12 54r17 56r13 57r12 58r19 60r13 61r12
+. 62r19
+17V13*GetCelcius{float} 17>24 23|70b13 89l8 89t18 147s38 176s38
+17r24 TheTemp{9R9} 23|70b24 73r10 74r12 75r17 77r13 78r12 79r19 81r13 82r12
+. 83r17
+18V13*GetKelvin{float} 18>23 23|91b13 110l8 110t17 151s38 180s38
+18r23 TheTemp{9R9} 23|91b23 94r10 95r12 96r17 98r13 99r12 100r19 102r13 103r12
+. 104r17
+20U14*raiseTemp 20<24 20>52 23|118b14 121l8 121t17
+20r24 TheName{9R9} 23|118b24 120m7 120r28
+20f52 Degrees{float} 23|118b52 120r48
+21U14*lowerTemp 21<24 21>52 23|123b14 126l8 126t17
+21r24 TheName{9R9} 23|123b24 125m7 125r28
+21f52 Degrees{float} 23|123b52 125r48
+23V13*Equals{boolean} 23>20 23>29 23|135b13 156l8 156t14
+23r20 TheTemp{9R9} 23|135b20 138r10 139r17 141r13 142r12 143r18 145r13 146r12
+. 147r18 149r13 150r12 151r18
+23r29 ATemp{9R9} 23|135b29 138r28 139r37 143r48 147r49 151r48
+24V13*LessThan{boolean} 24>22 24>31 23|164b13 185l8 185t16
+24r22 TheTemp{9R9} 23|164b22 167r10 168r17 170r13 171r12 172r18 174r13 175r12
+. 176r18 178r13 179r12 180r18
+24r31 ATemp{9R9} 23|164b31 167r28 168r37 172r48 176r49 180r48
+31f10*MyDegrees{float} 23|21m15 34r22 54r25 58r27 62r27 75r25 79r27 83r25
+. 96r25 100r27 104r25 120m15 120r36 125m15 125r36 139r25 139r43 143r26 147r26
+. 151r26 168r25 168r43 172r26 176r26 180r26
+32e10*MyScale{character} 23|22m15 39r22 52r18 53r20 56r21 57r20 60r21 61r20
+. 73r18 74r20 77r21 78r20 81r21 82r20 94r18 95r20 98r21 99r20 102r21 103r20
+. 138r18 138r34 141r21 142r20 145r21 146r20 149r21 150r20 167r18 167r34 170r21
+. 171r20 174r21 175r20 178r21 179r20
+

@@ -1,0 +1,258 @@
+Script started on Wed 15 Feb 2017 01:35:06 PM EST
+ajs94@aiken:~/CS214/labs/lab03$ cat YearCodes.Jav   java
+/* YearCodes.java is a driver for function yearCode().
+ *
+ * Begun by: Prof. Adams, for CS 214 at Calvin College.
+ * Completed by: Aaron Santucci
+ * Date: February 15, 2017
+ ************************************************************/
+
+import java.util.Scanner;
+
+public class YearCodes {
+
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("\nEnter your academic year: "); // prompt
+
+		String year = keyboard.next();       // read year
+		System.out.println(yearCode(year)); // display its code
+	}
+
+   /***************************************************************
+    * yearCode() converts an academic year into its integer code.
+    *
+    * Receive: year, a string.
+    * PRE: year is one of {freshman, sophomore, junior, or senior}.
+    * Return: the integer code corresponding to year.
+    */
+
+	public static int yearCode(String year) {
+		if (year.equals("freshman"))
+			return 1;
+		else if (year.equals("sophomore"))
+			return 2;
+		else if (year.equals("junior"))
+			return 3;
+		else if (year.equals("senior"))
+			return 4;
+		else
+			return 0;
+	}
+
+}
+ajs94@aiken:~/CS214/labs/lab03$ java -  deprecation YearCodes.java
+Unrecognized option: -deprecation
+Error: Could not create the Java Virtual Machine.
+Error: A fatal exception has occurred. Program will exit.
+ajs94@aiken:~/CS214/labs/lab03$ java -deprecation YearCodes.javaa[1@c
+ajs94@aiken:~/CS214/labs/lab03$ java YearCodes
+
+Enter your academic year: 
+fresha man
+1
+ajs94@aiken:~/CS214/labs/lab03$ java YearCodes
+
+Enter your academic year: 
+sophomore
+2
+ajs94@aiken:~/CS214/labs/lab03$ java YearCodes
+
+Enter your academic year: 
+junior
+3
+ajs94@aiken:~/CS214/labs/lab03$ java YearCodes
+
+Enter your academic year: 
+senior
+4
+ajs94@aiken:~/CS214/labs/lab03$ java YearCodes
+
+Enter your academic year: 
+asdf
+0
+ajs94@aiken:~/CS214/labs/lab03$ exit
+
+Script done on Wed 15 Feb 2017 01:36:45 PM EST
+Script started on Wed 15 Feb 2017 09:39:36 AM EST
+ajs94@aiken:~/CS214/labs/lab03$ cat year_codes.adb
+-- year_codes.adb converts academic year codes to corresponding years.
+--
+-- Begun by: Dr. Adams, for CS 214 at Calvin College.
+-- Completed by: Aaron Santucci ajs94
+-- Date: February 15, 2017
+--
+-- Input: year, a string
+-- Precondition: year is one of "freshman", "sophomore", "junior", "senior"
+-- Output: The year code (1, 2, 3 or 4) corresponding to year.
+----------------------------------------------------
+
+with Ada.Text_IO, Ada.Integer_Text_IO;
+use  Ada.Text_IO, Ada.Integer_Text_IO;
+
+procedure year_codes is
+
+	year : String(1..9) := "         ";
+	charsRead : Natural;
+
+	function yearCode (year: String) return integer is
+	begin
+		if year = "freshman " then
+			return 1;
+		elsif (year = "sophomore") then
+			return 2; 
+		elsif (year = "junior   ") then
+			return 3;
+		elsif (year = "senior   ") then
+			return 4;
+		else
+			return 0;
+		end if;
+	end yearCode;
+
+begin                                          
+   Put("Enter your academic year: ");           -- Prompt for input
+   Get_Line(year, charsRead);                   -- Input
+   Put( yearCode(year) );                       -- Convert and output
+   New_Line;
+end year_codes;
+
+ajs94@aiken:~/CS214/labs/lab03$ ga natmake year_coe dersw   s.adb
+gcc-5 -c year_codes.adb
+gnatbind-5 -x year_codes.ali
+gnatlink-5 year_codes.ali
+ajs94@aiken:~/CS214/labs/lab03$ ./year_cd odes
+Enter your academic year: fe reshman
+          1
+ajs94@aiken:~/CS214/labs/lab03$ ./year_codes
+Enter your academic year: sophomore
+          2
+ajs94@aiken:~/CS214/labs/lab03$ ./year_codes
+Enter your academic year: junior
+          3
+ajs94@aiken:~/CS214/labs/lab03$ ./year_codes
+Enter your academic year: senior
+          4
+ajs94@aiken:~/CS214/labs/lab03$ ./year_codesasdf    
+Enter your academic year: asdf
+          0
+ajs94@aiken:~/CS214/labs/lab03$ exit
+
+Script done on Wed 15 Feb 2017 09:40:56 AM EST
+;;; year_codes.el is a driver for function yearCode.
+;;; Begun by: Dr. Adams, for CS 214 at Calvin College.
+;;; Completed by: Aaron Santucci ajs94
+;;; Date: February 15, 2017
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; yearCode returns the code for a given academic year.                 ;;;
+;;; Receive: year, a string.                                             ;;;
+;;; Precondition: year is one of {freshman, sophomore, junior or senior}.;;;
+;;; Return: the integer code corresponding to year.                      ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun yearCode(year)
+  (if (equal year "freshman") 1
+    (if (equal year "sophomore") 2
+      (if (equal year "junior") 3
+	(if (equal year "senior") 4 0)))))
+yearCode
+
+	  
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; main function                        ;;;
+;;; input: year                          ;;;
+;;; output: code corresponding to year   ;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun main (year)
+ (interactive "sEnter your academic year: ")  ; read year
+ (message "%d" (yearCode year)))              ; display its code
+main
+
+
+
+
+;;; Tests...
+(main "freshman")
+"1"
+
+(main "sophomore")
+"2"
+
+(main "junior")
+"3"
+
+(main "senior")
+"4"
+
+(yearCode "freshman")
+1
+
+(yearCode "sophomore")
+2
+
+(yearCode "junior")
+3
+
+(yearCode "senior")
+4
+
+(yearCode "hello")
+0
+
+Script started on Wed 15 Feb 2017 01:33:51 PM EST
+ajs94@aiken:~/CS214/labs/lab03$ ca  t year codes.rb
+cat: year: No such file or directory
+cat: codes.rb: No such file or directory
+ajs94@aiken:~/CS214/labs/lab03$ cat year codes.rb[1P[1@_
+#! /usr/bin/ruby
+# year_codes.rb translates an academic year into a numeric code
+# Begun by: Dr. Nelesen, for CS 214 at Calvin College 
+# Completed by: Aaron Santucci ajs94
+# Date: February 15, 2017
+################################################################
+
+# Input:  The name of an academic year
+# Precondition: The academic year is a string with a value of freshman, 
+#   sophomore, junior or senior
+# Output: The corresponding integer code for the given academic year
+
+def yearCode(year)
+	if year =~ /freshman/ then
+		return 1
+	elsif year =~ /sophomore/ then 
+		return 2
+	elsif year =~ /junior/ then
+		return 3
+	elsif year =~ /senior/ then
+		return 4
+	else
+		return 0
+	end
+end
+
+if __FILE__ == $0
+   print "Enter the year: "
+   year = gets
+   print "Numeric code is: "
+   puts yearCode(year)
+end
+
+
+ajs94@aiken:~/CS214/labs/lab03$ cat year_codes.rb codes.rb[1@ruby year_codes.rb
+Enter the year: freshman
+Numeric code is: 1
+ajs94@aiken:~/CS214/labs/lab03$ ruby year_codes.rb
+Enter the year: sophomore
+Numeric code is: 2
+ajs94@aiken:~/CS214/labs/lab03$ ruby year_codes.rb
+Enter the year: junior
+Numeric code is: 3
+ajs94@aiken:~/CS214/labs/lab03$ ruby year_codes.rbs 
+Enter the year: senior
+Numeric code is: 4
+ajs94@aiken:~/CS214/labs/lab03$ ruby year_codes.rb
+Enter the year: asdf
+Numeric code is: 0
+ajs94@aiken:~/CS214/labs/lab03$ exit
+
+Script done on Wed 15 Feb 2017 01:34:39 PM EST

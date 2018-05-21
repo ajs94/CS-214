@@ -1,0 +1,68 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U temp_tester%b		temp_tester.adb		c6c1f40f NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W temperature%s		temperature.adb		temperature.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-flteio.ads		20070406091342 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiflio.ads		20140717063513 56fbda09 ada.text_io.float_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20141031112219 1d274481 system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D temp_tester.adb	20170411181154 330a5917 temp_tester%b
+D temperature.ads	20170411174420 2c2c1f6c temperature%s
+X 1 ada.ads
+16K9*Ada 19e8 24|6r6 6r23 7r6 7r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[8|46] 24|7w10 7r33
+X 7 a-textio.ads
+49K13*Text_IO 471e16 24|6w10 6r27
+166U14*New_Line 24|26s10 33s4 44s10
+242U14*Put 24|23s10 23s63 24s10 24s57 25s10 41s10 41s63 42s10 42s57 43s10
+X 8 a-tiflio.ads
+68U14*Put 24|23s30[3|20] 24s30[3|20] 25s26[3|20] 41s30[3|20] 42s30[3|20]
+. 43s26[3|20]
+X 24 temp_tester.adb
+10U11*Temp_Tester 10b11 51l5 51t16
+11r4 BaseTemp{25|9R9} 17m9 22r19 23r44 24r45 25r40 27m20 35m9 40r19 41r44
+. 42r45 43r40 45m20
+12r4 LimitTemp{25|9R9} 18m9 22r29 36m9 40r29
+13f4 StepValue{float} 19m4 27r30 37m4 45r30
+X 25 temperature.ads
+7K9*Temperature 24|8w6 8r23 11r15 12r16 25|35e16
+9R9*Temperature 24|11r27 12r28 25|33e17
+11U14*Init 24|17s4 18s4 35s4 36s4
+16V13*GetFahren{float} 24|23s34 41s34
+17V13*GetCelcius{float} 24|24s34 42s34
+18V13*GetKelvin{float} 24|25s30 43s30
+20U14*raiseTemp 24|27s10 45s10
+24V13*LessThan{boolean} 24|22s10 40s10
+

@@ -1,0 +1,61 @@
+V "GNAT Lib v5"
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U goose_package%b	goose_package.adb	49729aa5 NE OO PK
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U goose_package%s	goose_package.ads	5f15f082 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W flying_package%s	flying_package.adb	flying_package.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
+D bird_package.ads	20170503201010 c278ef0e bird_package%s
+D flying_package.ads	20170503192201 15aabcad flying_package%s
+D goose_package.ads	20170503192914 4abf4c2f goose_package%s
+D goose_package.adb	20170428185750 03cdd68a goose_package%b
+D system.ads		20141031112219 1d274481 system%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140801093848 ed88f8fb system.storage_elements%b
+D s-string.ads		20140225151139 8fe54fb7 system.strings%s
+D s-ststop.ads		20140225151139 e6693757 system.strings.stream_ops%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+X 7 bird_package.ads
+18U14*Init
+25V13*Name{string}
+X 8 flying_package.ads
+9K9*Flying_Package 34e19 9|9w6 9r26
+11R9*Flying_Type<7|10R9> 31e17 9|13r25 32r27
+18V13*Movement{string}
+X 9 goose_package.ads
+11K9*Goose_Package 32E9 38l5 38e18 10|9b14 33l5 33t18
+13R7*Goose_Type<8|11R9> 7|18p14 25p13 8|18p13 9|21P11 21r29 29P11 29r34 32c9
+. 35e17 10|16r31 28r36
+21V11*Call{string}<7|32p13> 21>16 10|16b13 19l8 19t12
+21r16 A_Goose{13R7} 10|16b18
+29V11*Type_Name{string}<8|25p13> 29>21 10|28b13 31l8 31t17
+29r21 A_Goose{13R7} 10|28b23
+

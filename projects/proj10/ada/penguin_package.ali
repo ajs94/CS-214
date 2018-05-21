@@ -1,0 +1,76 @@
+V "GNAT Lib v5"
+P SS ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U penguin_package%b	penguin_package.adb	9ee1f002 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U penguin_package%s	penguin_package.ads	fb403cf4 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W walking_package%s	walking_package.adb	walking_package.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
+D bird_package.ads	20170503201010 c278ef0e bird_package%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D penguin_package.ads	20170503194849 8aabbfa9 penguin_package%s
+D penguin_package.adb	20170503200905 2c27ba7f penguin_package%b
+D system.ads		20141031112219 1d274481 system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-secsta.ads		20140225151139 86a2856d system.secondary_stack%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20140801093848 ed88f8fb system.storage_elements%b
+D s-string.ads		20140225151139 8fe54fb7 system.strings%s
+D s-ststop.ads		20140225151139 e6693757 system.strings.stream_ops%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D walking_package.ads	20170503194640 71eb835d walking_package%s
+X 1 ada.ads
+16K9*Ada 19e8 13|8r6 9r5
+X 6 a-textio.ads
+49K13*Text_IO 471e16 13|8w10 9r9
+X 9 bird_package.ads
+18U14*Init
+25V13*Name{string}
+X 12 penguin_package.ads
+10K9*Penguin_Package 29E9 35l5 35e20 13|11b14 34l5 34t20
+12R9*Penguin_Type<30|11R9> 9|18p14 25p13 12|19P13 19r33 26P13 26r38 29c9
+. 32e17 13|18r33 28r38 30|14p13
+19V13*Call{string}<9|32p13> 19>18 13|18b13 21l8 21t12
+19r18 A_Penguin{12R9} 13|18b18
+26V13*Type_Name{string}<30|17p13> 26>23 13|28b13 31l8 31t17
+26r23 A_Penguin{12R9} 13|28b23
+X 30 walking_package.ads
+9K9*Walking_Package 12|8w6 8r27 30|26e20
+11R9*Walking_Type<9|10R9> 12|12r29 29r29 30|23e17
+14V13*Movement{string}
+

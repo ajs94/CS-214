@@ -1,0 +1,33 @@
+-- flying_package.adb gives flying bird-related definitions
+--
+-- Completed by: Aaron Santucci
+-- Date: May 3, 2017
+---------------------------------------------------
+
+with Ada.Text_IO;
+use Ada.Text_IO;
+
+package body Flying_Package is
+
+ ----------------------------------------------------
+ -- A Duck's Call (Over-rides Bird.Call())          -
+ -- Receive: A_Duck, a Duck_Type.                   -
+ -- Return: "Quack!"                                -
+ ----------------------------------------------------
+   function Movement(A_Duck : in Flying_Type) return String is
+   begin
+      return "flew";
+   end Movement;
+
+ ------------------------------------------------------------
+ -- Determine type of a Duck (Over-rides Bird.Type_Name()) -
+ -- Receive: A_Duck, a Duck_Type.                          -
+ -- Return: "Duck".                                        -
+ -----------------------------------------------------------
+   function Type_Name(A_Duck : in Flying_Type) return String is
+   begin
+      return "Flying";
+   end Type_Name;
+
+
+end Flying_Package;

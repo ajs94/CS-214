@@ -1,0 +1,61 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U average%b		average.adb		7683b64e NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-flteio.ads		20070406091342 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiflio.ads		20140717063513 56fbda09 ada.text_io.float_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D average.adb		20170308142635 af64043a average%b
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D system.ads		20141031112219 1d274481 system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 10|10r6 10r23 11r6 11r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[8|46] 10|11w10 11r33
+X 7 a-textio.ads
+49K13*Text_IO 471e16 10|10w10 10r27
+166U14*New_Line 10|49s9 52s9
+242U14*Put 10|47s9 50s9
+X 8 a-tiflio.ads
+68U14*Put 10|48s9[3|20] 51s9[3|20]
+X 10 average.adb
+13U11*average 13b11 53l5 53t12
+15A14 Vector(float)<integer> 17r18 18r18 25r29 40r33
+17a9 array0{15A14} 48r22
+18a9 array1{15A14} 51r22
+25V10 sum{float} 25b10 25>16 33l13 33t16 42s26
+25a16 anArray{15A14} 28r26 30r42
+26f9 total{float} 30m25 30r34 32r24
+28i21 i{integer} 30r50
+40V10 average{float} 40b10 40>20 43l13 43t20 48s14 51s14
+40a20 anArray{15A14} 42r30 42r47
+
